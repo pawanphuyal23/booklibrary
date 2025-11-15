@@ -22,7 +22,7 @@ const HomeScreen = () => {
       onPress={() => navigation.navigate('Details', { book: item, bookTitle: item.title })}
     >
       <Image 
-        source={{ uri: item.coverUrl }} 
+        source={{ uri: item.coverUrl || 'https://via.placeholder.com/60x90.png?text=No+Cover' }} 
         style={styles.coverThumbnail} 
       />
       <View style={styles.cardContent}>
